@@ -9,6 +9,7 @@ You can use this Streamlit component to create beautiful and interactive WordClo
 
 ![WordCloud Example](./img/wordcloud-example.png)
 
+
 ## Quickstart
 
 * Clone this repo.
@@ -28,6 +29,7 @@ $ streamlit run usage-example.py
 * Open `` in your browser.
 * If everything goes well you should be able to see a page similar to this:
 ![Usage Example](./img/usage-example-page.png)
+
 
 ## Examples
 
@@ -53,6 +55,7 @@ return_obj = wordcloud.visualize(words, tooltip_data_fields={
 }, per_word_coloring=False)
 ```
 
+
 ## .visualize() Method Options
 
 | Prop  | Default | Type | Description |
@@ -71,6 +74,7 @@ return_obj = wordcloud.visualize(words, tooltip_data_fields={
 | enable_tooltip | `True` | `bool` | Whether to show tooltip popover once hover on a word. |
 | tooltip_data_fields | `{'text':'Word', 'value':'Count'}` | `dict` | A dictionary containing keys and their displayed values to be used in tooltip. The keys in this dictionary can only be selected from the ones passed in the `words` dictionaries. |
 | key | `None` | `str` | An optional key that uniquely identifies this Streamlit component. |
+
 
 
 ## Development
