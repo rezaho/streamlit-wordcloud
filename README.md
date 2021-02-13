@@ -101,9 +101,9 @@ $ npm run start  # Start the Webpack dev server
 
 * First open `streamlit_wordcloud/streamlit_wordcloud.py` in an editor of your choice and change `_RELEASE` to `False`.
 
-* From a separate terminal, run the template's Streamlit app:
+* From a separate terminal, run the Streamlit Wordcloud app:
 
 ```
 $ .venv/bin/activate  # activate the venv you created earlier
-$ streamlit run streamlit_wordcloud/streamlit_wordcloud.py  # run the wordcloud module
+$ streamlit run streamlit_wordcloud/streamlit_wordcloud.py  # run the wordcloud app
 ```
