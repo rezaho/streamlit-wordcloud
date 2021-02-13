@@ -25,6 +25,9 @@ $ pip install streamlit-wordcloud # install streamlit wordcloud package
 ```
 $ streamlit run usage-example.py
 ```
+* Open `` in your browser.
+* If everything goes well you should be able to see a page similar to this:
+![Usage Example](./img/wordcloud-example.png)
 
 ## Examples
 
