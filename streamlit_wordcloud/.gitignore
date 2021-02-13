@@ -1,0 +1,6 @@
+streamlit_wordcloud.egg-info/
+build/
+dist/
+**/node_modules/
+streamlit_wordcloud/build/
+.venv/
