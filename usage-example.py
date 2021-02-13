@@ -54,7 +54,7 @@ return_obj = wordcloud.visualize(words, tooltip_data_fields={
 ```
 """)
 # Available Options
-st.header("3. visualize() Method Options")
+st.header("3. .visualize() Method Options")
 st.markdown("""
 | Prop  | Default | Type | Description |
 | :------------ | :---------------:| :---------------:| ---------------|

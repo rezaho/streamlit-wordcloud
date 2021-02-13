@@ -53,7 +53,7 @@ return_obj = wordcloud.visualize(words, tooltip_data_fields={
 }, per_word_coloring=False)
 ```
 
-## visualize() Method Options
+## .visualize() Method Options
 
 | Prop  | Default | Type | Description |
 | :------------ | :---------------:| :---------------:| ---------------|
