@@ -12,22 +12,23 @@ You can use this Streamlit component to create beautiful and interactive WordClo
 
 ## Quickstart
 
-* Clone this repo.
-1. Create a new Python virtual environment for the package to be install (Optional):
+1. Clone this repo.
+2. Create a new Python virtual environment for the package to be install (Optional):
 ```
 $ python3 -m venv .venv  # create venv
 $ .venv/bin/activate   # activate venv
 ```
-2. Install the package from PyPi
+3. Install the package from PyPi
 ```
 $ pip install streamlit-wordcloud # install streamlit wordcloud package
 ```
-* Run the example provided in this repo in `usage-example.py`:
+4 Run the example provided in this repo in `usage-example.py`:
 ```
 $ streamlit run usage-example.py
 ```
-* Open `` in your browser.
-* If everything goes well you should be able to see a page similar to this:
+5 Open `localhost:8501` in your browser.
+
+6 If everything goes well you should be able to see a page similar to this:
 ![Usage Example](./img/usage-example-page.png)
 
 
@@ -80,21 +81,27 @@ return_obj = wordcloud.visualize(words, tooltip_data_fields={
 ## Development
 
 * Ensure you have [Python 3.6+](https://www.python.org/downloads/), [Node.js](https://nodejs.org), and [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed.
+
 * Clone this repo.
+
 * Create a new Python virtual environment for the template:
 ```
 $ python3 -m venv .venv  # create venv
 $ .venv/bin/activate   # activate venv
 $ pip install streamlit # install streamlit
 ```
+
 * Initialize and run the component template frontend:
 ```
 $ cd stream_wordcloud/frontend
 $ npm install    # Install npm dependencies
 $ npm run start  # Start the Webpack dev server
 ```
+
+* First open `stream_wordcloud/streamlit_wordcloud.py` in an editor of your choice and change `_RELEASE` to `False`.
+
 * From a separate terminal, run the template's Streamlit app:
-First open `stream_wordcloud/streamlit_wordcloud.py` in an editor of your choice and change `_RELEASE` to `False`.
+
 ```
 $ .venv/bin/activate  # activate the venv you created earlier
 $ streamlit run stream_wordcloud/streamlit_wordcloud.py  # run the example
