@@ -52,6 +52,23 @@ return_obj = wordcloud.visualize(words, tooltip_data_fields={
     'text':'Company', 'value':'Mentions', 'country':'Country of Origin', 'industry':'Industry'
 }, per_word_coloring=False)
 ```
+## visualize() Method Options
+| Prop  | Default | Type | Description |
+| :------------ | :---------------:| :---------------:| ---------------|
+| words | `None` | `list[dict]` | List of word dictionaries to be used for wordcloud visualiztion. Required keys: `'text', 'value'`. Optional keys: `'color'`, `<-Any Additional Meta Key->` |
+| width | `'100%'` | `str` | Width of wordcloud |
+| height | `None` | `str` | Height of wordcloud |
+| font_min | `None` | `int` | Smallest font size of words in wordcloud |
+| font_max | `None` | `int` | Largest font size of words in wordcloud |
+| font_scale | `None` | `float` | The scaling factor which will be multiplied by the default font sizes. `font_scale` can only effects if no `font_min` or `font_max` has been passed. |
+| max_words | `None` | `int` | Maximum number of words to be displayed on wordcloud. |
+| palette | `viridis` | `str` | Color palette to be used for the words in the wordcloud. This will only have an effect if `per_word_coloring` is set to `False`. Available Options: [`Matplotlib Colormaps`](https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html) |
+| per_word_coloring | `False` | `bool` | If `True`, the `color` key in the `words` objects will be used to fill the words in wordcloud. |
+| padding | `1` | `int` | Padding between words in word cloud. |
+| layout | `'rectangular'` | `str` | Wordcloud layout. Available options: `['rectangular', 'archimedean']` |
+| enable_tooltip | `True` | `bool` | Whether to show tooltip popover once hover on a word. |
+| tooltip_data_fields | `{'text':'Word', 'value':'Count'}` | `dict` | A dictionary containing keys and their displayed values to be used in tooltip. The keys in this dictionary can only be selected from the ones passed in the `words` dictionaries. |
+| key | `None` | `str` | An optional key that uniquely identifies this Streamlit component. |
 
 ## Development
 
