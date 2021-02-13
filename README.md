@@ -52,7 +52,9 @@ return_obj = wordcloud.visualize(words, tooltip_data_fields={
     'text':'Company', 'value':'Mentions', 'country':'Country of Origin', 'industry':'Industry'
 }, per_word_coloring=False)
 ```
+
 ## visualize() Method Options
+
 | Prop  | Default | Type | Description |
 | :------------ | :---------------:| :---------------:| ---------------|
 | words | `None` | `list[dict]` | List of word dictionaries to be used for wordcloud visualiztion. Required keys: `'text', 'value'`. Optional keys: `'color'`, `<-Any Additional Meta Key->` |
@@ -69,6 +71,7 @@ return_obj = wordcloud.visualize(words, tooltip_data_fields={
 | enable_tooltip | `True` | `bool` | Whether to show tooltip popover once hover on a word. |
 | tooltip_data_fields | `{'text':'Word', 'value':'Count'}` | `dict` | A dictionary containing keys and their displayed values to be used in tooltip. The keys in this dictionary can only be selected from the ones passed in the `words` dictionaries. |
 | key | `None` | `str` | An optional key that uniquely identifies this Streamlit component. |
+
 
 ## Development
 
