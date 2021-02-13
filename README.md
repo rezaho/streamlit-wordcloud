@@ -21,7 +21,7 @@ $ .venv/bin/activate   # activate venv
 ```
 $ pip install streamlit-wordcloud # install streamlit wordcloud package
 ```
-* Run example provided in `usage-example.py`:
+* Run the example provided in this repo in `usage-example.py`:
 ```
 $ streamlit run usage-example.py
 ```
