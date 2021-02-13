@@ -27,7 +27,7 @@ $ streamlit run usage-example.py
 ```
 * Open `` in your browser.
 * If everything goes well you should be able to see a page similar to this:
-![Usage Example](./img/usage-example.png)
+![Usage Example](./img/usage-example-page.png)
 
 ## Examples
 
