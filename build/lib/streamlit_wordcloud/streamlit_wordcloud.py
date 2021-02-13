@@ -41,7 +41,7 @@ def visualize(
     Parameters
     ----------
     words: list[dict]
-        The list of words to be plotted in a wordcloud. Each word should be a
+        The list of words to be used for wordcloud visualiztion. Each word should be a
         dictionary containing the following keys:
             text: str
                 [required] word to be displayed on the wordcloud
@@ -69,33 +69,32 @@ def visualize(
         200, 1.5em, 300pt, 10mm, ...
     
     font_min: int
-        The smallest font size of words in the wordcloud.
+        The smallest font size of words in wordcloud.
     
     font_max: int
-        The largest font size of words in the wordcloud.
+        The largest font size of words in wordcloud.
     
     font_scale: float
-        The scaling factor which will be multiplied by the default font sizes. Please
-        note that the `font_scale` can only effects if no `font_min` or `font_max` has
-        been passed. In case of passing `font_min` and `font_max`, only their absolute
-        number will be effective.
+        The scaling factor which will be multiplied by the default font sizes. `font_scale` 
+        can only effects if no `font_min` or `font_max` has been passed. In case of passing 
+        `font_min` and `font_max`, only their absolute number will be effective.
 
     max_words: int
-        The maximum number of words to be plotted on the wordcloud.
+        The maximum number of words to be displayed on wordcloud.
 
     palette: str
-        The color palette to be used for the words in the wordcloud. Please note that 
-        this value may only effect if no `color` key has been passed in the list of
-        `words`. By default, the color palette is 'viridis'. You can pass any valid 
-        Matplotlib Colormap (Please refer to the following link for the list of all
-        color palettes: https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html ).
+        The color palette to be used for the words in the wordcloud. This will only have av effect 
+        if no `color` key has been passed in the list of `words`. By default, the color palette is 
+        'viridis'. You can pass any valid Matplotlib Colormap (Please refer to the following link 
+        for the list of all color palettes: 
+            https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html ).
 
     per_word_coloring: bool
-        If True, the `color` key in the `words` parameter will be used to fill the 
-        words in the wordcloud.
+        If True, the `color` key in the `words` objects will be used to fill the 
+        words in wordcloud.
 
     padding: int
-        The padding between words in the word cloud. Default: 1 .
+        The padding between words in word cloud. Default: `1` .
 
     layout: str
         The wordcloud layout. Available options: ['rectangular', 'archimedean']
@@ -104,9 +103,8 @@ def visualize(
         Whether to show tooltip popover once hover on a word.
 
     tooltip_data_fields: dict
-        A dictionary containing all the fields and their displayed valued to be shown 
-        in the tooltip. These fields can only be selected from the available keys 
-        passed in the `words` parameter.
+        A dictionary containing keys (all the fields) and their displayed values to be used 
+        in tooltip. These fields can only be selected from the keys passed in the `words` dictionaries.
 
     key: str or None
         An optional key that uniquely identifies this component. If this is
@@ -143,28 +141,31 @@ def visualize(
     return component_value
 
 
-# if not _RELEASE:
-# import streamlit as st
+if not _RELEASE:
+    import streamlit as st
 
-# st.set_page_config(layout="wide")
-# st.subheader("Component with constant args")
+    st.set_page_config(layout="centered")
 
-# words = [
-#     dict(text="told", value=204, color="#b5de2b", country="US"),
-#     dict(text="mistake", value=151, color="#b5de2b", country="DE"),
-#     dict(text="thought", value=26, color="#b5de2b", country="UK"),
-#     dict(text="bad", value=17, color="#b5de2b", country="UK"),
-#     dict(text="NOT", value=227, color="#b5de2b", country="US"),
-#     dict(text="WHY", value=57, color="#b5de2b", country="DE"),
-#     dict(text="GO", value=107, color="#b5de2b", country="FR"),
-#     dict(text="hospital", value=31, color="#b5de2b", country="FR"),
-#     dict(text="eye", value=43, color="#b5de2b", country="US"),
-#     dict(text="test", value=20, color="#b5de2b", country="US"),
-#     dict(text="appointment", value=49, color="#b5de2b", country="US"),
-# ]
-# return_dict = visualize(words, tooltip_data_fields={
-#     'text':'Word', 'value':'Count', 'country':'Country of Origin'
-# }, per_word_coloring=False)
-# st.markdown("You've clicked:\n\n {}".format(json.dumps(return_dict, indent=2)))
+    st.title("Streamlit WordCloud Component")
+    st.write("This is an example of how you might use the Streamlit wordcloud component and retrieve its response object.")
+    # Using Wordcloud component
+    words = [
+        dict(text="Robinhood", value=16000, color="#b5de2b", country="US", industry="Cryptocurrency"),
+        dict(text="Personio", value=8500, color="#b5de2b", country="DE", industry="Human Resources"),
+        dict(text="Boohoo", value=6700, color="#b5de2b", country="UK", industry="Beauty"),
+        dict(text="Deliveroo", value=13400, color="#b5de2b", country="UK", industry="Delivery"),
+        dict(text="SumUp", value=8300, color="#b5de2b", country="UK", industry="Credit Cards"),
+        dict(text="CureVac", value=12400, color="#b5de2b", country="DE", industry="BioPharma"),
+        dict(text="Deezer", value=10300, color="#b5de2b", country="FR", industry="Music Streaming"),
+        dict(text="Eurazeo", value=31, color="#b5de2b", country="FR", industry="Asset Management"),
+        dict(text="Drift", value=6000, color="#b5de2b", country="US", industry="Marketing Automation"),
+        dict(text="Twitch", value=4500, color="#b5de2b", country="US", industry="Social Media"),
+        dict(text="Plaid", value=5600, color="#b5de2b", country="US", industry="FinTech"),
+    ]
+    return_obj = visualize(words, tooltip_data_fields={
+        'text':'Company', 'value':'Mentions', 'country':'Country of Origin', 'industry':'Industry'
+    }, per_word_coloring=False)
 
-# st.markdown("---")
+    # Output the response Object
+    st.header("1. Response object:\n")
+    st.write(return_obj)

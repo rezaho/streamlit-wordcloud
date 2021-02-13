@@ -1,6 +1,7 @@
 # Streamlit WordCloud Component
 
-This is a Streamlit wrapper For [React Wordcloud](https://github.com/chrisrzhou/react-wordcloud) with some minor modifications.
+This component will allow you to build beautiful and interactive Wordcloud visualizations in Streamlit. 
+This project is a wrapper on [React Wordcloud](https://github.com/chrisrzhou/react-wordcloud) with some minor modifications.
 
 
 ## Overview

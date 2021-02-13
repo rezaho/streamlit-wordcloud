@@ -5,7 +5,7 @@ setuptools.setup(
     version="0.1.0",
     author="Reza Hosseini",
     author_email="re1372@gmail.com",
-    description="",
+    description="This is an interactive Wordcloud component for Streamlit. This is based on React-Wordcloud (https://github.com/chrisrzhou/react-wordcloud).",
     long_description="",
     long_description_content_type="text/plain",
     url="https://github.com/rezaho/streamlit-wordcloud",
