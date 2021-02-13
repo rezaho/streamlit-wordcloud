@@ -7,11 +7,10 @@ This is a Streamlit wrapper For [React Wordcloud](https://github.com/chrisrzhou/
 
 You can use this Streamlit component to create beautiful and interactive WordCloud visualization as shown in the image below. 
 
-
+![WordCloud Example](./img/wordcloud-example.png)
 
 ## Quickstart
 
-* Ensure you have [Python 3.6+](https://www.python.org/downloads/), [Node.js](https://nodejs.org), and [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed.
 * Clone this repo.
 1. Create a new Python virtual environment for the package to be install (Optional):
 ```
@@ -26,8 +25,6 @@ $ pip install streamlit-wordcloud # install streamlit wordcloud package
 ```
 $ streamlit run usage-example.py
 ```
-* If all goes well, you should see something like this:
-![Quickstart Success](quickstart.png)
 
 ## Examples
 
@@ -75,6 +72,3 @@ First open `stream_wordcloud/streamlit_wordcloud.py` in an editor of your choice
 $ .venv/bin/activate  # activate the venv you created earlier
 $ streamlit run stream_wordcloud/streamlit_wordcloud.py  # run the example
 ```
-* If all goes well, you should see something like this:
-![Quickstart Success](quickstart.png)
-* Modify the ...
