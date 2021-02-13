@@ -69,7 +69,7 @@ return_obj = wordcloud.visualize(words, tooltip_data_fields={
 | font_max | `None` | `int` | Largest font size of words in wordcloud |
 | font_scale | `None` | `float` | The scaling factor which will be multiplied by the default font sizes. `font_scale` can only effects if no `font_min` or `font_max` has been passed. |
 | max_words | `None` | `int` | Maximum number of words to be displayed on wordcloud. |
-| palette | `viridis` | `str` | Color palette to be used for the words in the wordcloud. This will only have an effect if `per_word_coloring` is set to `False`. Available Options: [`Matplotlib Colormaps`](https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html) |
+| palette | `'viridis'` | `str` | Color palette to be used for the words in the wordcloud. This will only have an effect if `per_word_coloring` is set to `False`. Available Options: [`Matplotlib Colormaps`](https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html) |
 | per_word_coloring | `False` | `bool` | If `True`, the `color` key in the `words` objects will be used to fill the words in wordcloud. |
 | padding | `1` | `int` | Padding between words in word cloud. |
 | layout | `'rectangular'` | `str` | Wordcloud layout. Available options: `['rectangular', 'archimedean']` |
@@ -94,16 +94,16 @@ $ pip install streamlit # install streamlit
 
 * Initialize and run the component template frontend:
 ```
-$ cd stream_wordcloud/frontend
+$ cd streamlit_wordcloud/frontend
 $ npm install    # Install npm dependencies
 $ npm run start  # Start the Webpack dev server
 ```
 
-* First open `stream_wordcloud/streamlit_wordcloud.py` in an editor of your choice and change `_RELEASE` to `False`.
+* First open `streamlit_wordcloud/streamlit_wordcloud.py` in an editor of your choice and change `_RELEASE` to `False`.
 
 * From a separate terminal, run the template's Streamlit app:
 
 ```
 $ .venv/bin/activate  # activate the venv you created earlier
-$ streamlit run stream_wordcloud/streamlit_wordcloud.py  # run the example
+$ streamlit run streamlit_wordcloud/streamlit_wordcloud.py  # run the wordcloud module
 ```
