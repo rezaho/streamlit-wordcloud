@@ -28,8 +28,8 @@ return_obj = wordcloud.visualize(words, tooltip_data_fields={
 st.header("1. Response object:\n")
 st.write(return_obj)
 
-# Usuage example code
-st.header("2. Usuage Example")
+# Usage example code
+st.header("2. Usage Example")
 st.markdown("""
 ```python
 import streamlit as st 
