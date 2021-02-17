@@ -67,7 +67,7 @@ return_obj = wordcloud.visualize(words, tooltip_data_fields={
 | height | `None` | `str` | Height of wordcloud |
 | font_min | `None` | `int` | Smallest font size of words in wordcloud |
 | font_max | `None` | `int` | Largest font size of words in wordcloud |
-| font_scale | `None` | `float` | The scaling factor which will be multiplied by the default font sizes. `font_scale` can only effects if no `font_min` or `font_max` has been passed. |
+| font_scale | `None` | `float` | The scaling factor which will be multiplied by the default font sizes. `font_scale` will only have an effect if no `font_min` or `font_max` has been passed. |
 | max_words | `None` | `int` | Maximum number of words to be displayed on wordcloud. |
 | palette | `'viridis'` | `str` | Color palette to be used for the words in the wordcloud. This will only have an effect if `per_word_coloring` is set to `False`. Available Options: [`Matplotlib Colormaps`](https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html) |
 | per_word_coloring | `False` | `bool` | If `True`, the `color` key in the `words` objects will be used to fill the words in wordcloud. |
